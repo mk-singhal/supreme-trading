@@ -1,0 +1,85 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+---
+
+<div class="container px-5 py-16 mx-auto">
+  <div class="text-center mb-10">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+      A Peek Inside Our Store
+    </h1>
+    <div class="w-16 h-1 rounded-full bg-yellow-700 mx-auto mb-4"></div>
+    <p
+      class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500"
+    >
+      Explore the heart of Supreme Trading Co. — shelves stacked with quality,
+      aisles full of promise.
+    </p>
+  </div>
+
+  <div class="swiper mySwiper relative rounded-lg overflow-hidden">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img
+          src="/images/store.jpg"
+          loading="lazy"
+          class="w-full h-[300px] md:h-[500px] object-cover"
+          alt="Shop Image 1"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="/images/store-2.jpg"
+          loading="lazy"
+          class="w-full h-[300px] md:h-[500px] object-cover"
+          alt="Shop Image 2"
+        />
+      </div>
+      <div class="swiper-slide">
+        <img
+          src="/images/nitro.jpg"
+          loading="lazy"
+          class="w-full h-[300px] md:h-[500px] object-cover"
+          alt="Shop Image 3"
+        />
+      </div>
+    </div>
+
+    <div class="swiper-pagination mt-4"></div>
+    <div class="swiper-button-next !text-yellow-700 z-10"></div>
+    <div class="swiper-button-prev !text-yellow-700 z-10"></div>
+  </div>
+</div>
+
+<!-- Swiper CDN -->
+<script
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+  onload="initSwiper()"
+  defer></script>
+
+<!-- Safe Swiper Initialization -->
+<script is:inline>
+  function initSwiper() {
+    if (typeof Swiper === "undefined") {
+      console.error("Swiper failed to load.");
+      return;
+    }
+
+    new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+</script>

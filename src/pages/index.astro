@@ -1,12 +1,13 @@
 ---
 title: "Home - Supreme Trading Company";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ShopCarousel from "../components/ShopCarousel.astro";
 ---
 
 <BaseLayout>
   <section class="text-gray-700 body-font">
     <div
-      class="container mx-auto flex px-5 py-8 pb-24 md:flex-row flex-col items-center"
+      class="container mx-auto flex px-5 py-8 pb-16 md:flex-row flex-col items-center"
     >
       <div
         class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
@@ -22,18 +23,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           perfect footwear. Supreme Trading Co. delivers premium raw materials
           at competitive prices—on time, every time.
         </p>
-        <div class="flex justify-center">
-          <button
-            class="inline-flex text-white bg-amber-500 hover:bg-amber-600 border-0 py-2 px-6 focus:outline-none rounded text-lg"
-            >Explore Products</button
+        <div
+          class="flex flex-col sm:flex-row justify-center lg:justify-start w-full gap-4"
+        >
+          <a
+            href="/products"
+            class="w-full sm:w-auto text-white bg-yellow-700 hover:bg-yellow-800 border-0 py-2 px-6 focus:outline-none rounded text-lg flex items-center justify-center"
           >
-          <button
-            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
-            >Contact Us</button
+            Explore Products
+          </a>
+          <a
+            href="/contact-us"
+            class="w-full sm:w-auto text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg flex items-center justify-center"
           >
+            Contact Us
+          </a>
         </div>
       </div>
-      <div class="lg:max-w-xl lg:w-2/3 md:w-1/2 w-5/6">
+      <div class="lg:max-w-xl lg:w-2/3 md:w-1/2 w-5/6 mt-8 md:mt-0">
         <img
           class="object-cover object-center rounded"
           alt="Store Image"
@@ -44,13 +51,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="text-gray-700 body-font border-t border-gray-200">
-    <div class="container px-5 py-24 mx-auto">
+    <div class="container px-5 py-16 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1
           class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
         >
           Why Choose Us?
         </h1>
+        <div class="w-16 h-1 rounded-full bg-yellow-700 mx-auto mb-4"></div>
         <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
           We’re more than just a supplier — we’re your reliable partner in every
           step of the shoemaking process. With a strong focus on quality, trust,
@@ -59,7 +67,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
       <div class="flex flex-wrap justify-center -m-4 text-center">
         <div class="p-4 sm:w-1/2 w-full max-w-md">
-          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full">
+          <div
+            class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full hover:shadow-lg transition duration-300"
+          >
             <svg
               version="1.1"
               id="Layer_1"
@@ -72,16 +82,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               ><g id="SVGRepo_iconCarrier">
                 <g>
                   <path
-                    style="fill:#F59E0B;"
+                    style="fill:#A16207;"
                     d="M230.646,325.595c-4.006-3.124-9.814-4.688-17.432-4.688h-76.465 c2.439-3.71,4.834-6.885,7.178-9.521c5.468-6.64,15.551-15.967,30.249-27.979c14.696-12.012,25.17-20.824,31.421-26.44 c6.248-5.614,12.378-13.378,18.384-23.291c6.006-9.911,9.009-20.922,9.009-33.032c0-7.713-1.441-15.161-4.321-22.339 c-2.882-7.178-6.91-13.5-12.085-18.97c-5.178-5.468-11.184-9.764-18.018-12.891c-10.547-4.688-23.291-7.031-38.232-7.031 c-12.403,0-23.218,1.831-32.446,5.493s-16.846,8.473-22.852,14.429c-6.006,5.958-10.524,12.598-13.55,19.922 c-3.028,7.324-4.541,14.355-4.541,21.094c0,5.566,1.611,9.961,4.834,13.184s7.273,4.834,12.158,4.834 c5.566,0,9.789-1.758,12.671-5.273c2.88-3.516,5.468-8.544,7.764-15.088c2.294-6.542,3.93-10.547,4.907-12.012 c7.324-11.229,17.381-16.846,30.176-16.846c6.054,0,11.646,1.369,16.772,4.102c5.127,2.735,9.179,6.569,12.158,11.499 c2.978,4.933,4.468,10.524,4.468,16.772c0,5.763-1.392,11.646-4.175,17.651s-6.837,11.865-12.158,17.578 c-5.323,5.713-11.989,11.403-19.995,17.065c-4.493,3.028-11.964,9.352-22.412,18.97c-10.451,9.62-22.17,21.167-35.156,34.644 c-3.127,3.321-6.006,7.887-8.643,13.696c-2.637,5.812-3.955,10.474-3.955,13.989c0,5.47,2.051,10.231,6.152,14.282 c4.102,4.054,9.814,6.079,17.139,6.079h107.813c6.445,0,11.254-1.659,14.429-4.98c3.173-3.319,4.761-7.372,4.761-12.158 C236.652,332.97,234.649,328.722,230.646,325.595z"
                   ></path>
                   <path
-                    style="fill:#F59E0B;"
+                    style="fill:#A16207;"
                     d="M401.008,181.747c-4.299-9.276-9.547-17.065-15.747-23.364 c-6.202-6.299-13.403-11.083-21.606-14.355c-8.203-3.271-17.336-4.907-27.393-4.907c-15.234,0-28.345,3.688-39.331,11.06 c-10.986,7.375-19.361,18.091-25.122,32.153c-3.321,8.496-5.764,18.654-7.324,30.469c-1.563,11.817-2.344,25.099-2.344,39.844 c0,11.426,0.707,22.046,2.124,31.86c1.415,9.814,3.637,18.775,6.665,26.88c5.955,14.845,14.818,26.466,26.587,34.863 c11.767,8.4,25.071,12.598,39.917,12.598c12.891,0,24.609-3.126,35.156-9.375s19.139-15.136,25.781-26.66 c5.273-9.375,8.885-19.823,10.84-31.348c1.952-11.522,2.93-25.292,2.93-41.309C412.141,220.664,408.428,197.861,401.008,181.747z M368.928,292.929c-2.051,11.623-5.617,20.558-10.693,26.807c-5.079,6.251-12.11,9.375-21.094,9.375 c-8.693,0-15.578-3.003-20.654-9.009c-5.079-6.006-8.693-14.868-10.84-26.587c-2.149-11.719-3.223-26.756-3.223-45.117 c0-27.049,2.514-47.069,7.544-60.059c5.028-12.987,13.989-19.482,26.88-19.482c8.983,0,16.015,2.907,21.094,8.716 c5.076,5.812,8.69,14.406,10.84,25.781c2.146,11.378,3.223,26.001,3.223,43.872C372.004,266.075,370.978,281.309,368.928,292.929z"
                   ></path>
                   <path
                     d="M560 230 h-40 v-40 h-40 v40 h-40 v40 h40 v40 h40 v-40 h40 z"
-                    fill="#F59E0B"></path>
+                    fill="#A16207"></path>
                 </g>
               </g></svg
             >
@@ -92,7 +102,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div class="p-4 sm:w-1/2 w-full max-w-md">
-          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full">
+          <div
+            class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full hover:shadow-lg transition duration-300"
+          >
             <svg
               version="1.1"
               id="Layer_1"
@@ -111,25 +123,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
                 <path
-                  style="fill:#F59E0B;"
+                  style="fill:#A16207;"
                   d="M156.747,473.492c-9.848,0-24.225-4.823-56.16-40.565c-16.231-18.165-29.533-36.033-30.091-36.785 c-0.376-0.507-0.717-1.036-1.023-1.587c-6.073-10.932-9.283-23.321-9.283-35.828v-90.89c0-7.925,6.424-14.35,14.35-14.35h116.075 c16.624,0,32.305,6.421,44.155,18.081l59.435,58.485c17.218,17.218,17.218,45.102,0.083,62.239 c-0.026,0.026-0.146,0.145-0.171,0.169c-8.227,8.227-19.264,12.798-31.004,12.798c-11.739,0-22.777-4.572-31.078-12.873 l-59.37-59.372c-5.889-0.044-15.45-0.089-23.087-0.123l-10.867-0.052c-7.925-0.042-14.317-6.499-14.275-14.424 c0.042-7.899,6.457-14.275,14.348-14.275c0.026,0,0.05,0,0.076,0l10.85,0.052c6.784,0.03,14.038,0.065,19.604,0.099 c2.808,0.017,5.19,0.036,6.876,0.056c4.159,0.046,8.461,0.093,12.618,4.223l63.521,63.521c2.88,2.88,6.71,4.467,10.784,4.467 c4.075,0,7.905-1.586,10.785-4.467c0.026-0.026,0.146-0.145,0.171-0.169c5.873-5.873,5.873-15.549-0.075-21.496l-59.353-58.403 c-6.447-6.344-14.98-9.838-24.026-9.838H88.889v76.541c0,7.337,1.808,14.609,5.236,21.088c2.615,3.468,13.585,17.86,26.469,32.423 c25.476,28.797,35.211,32.208,36.505,32.554l155.149-0.03c10.576,0,22.902-5.538,34.621-11.21 c9.893-4.787,83.334-54.602,127.304-84.877c0.24-0.165,0.485-0.323,0.735-0.474c8.199-4.939,10.853-15.631,5.913-23.835 c-2.391-3.971-6.189-6.774-10.689-7.892c-4.415-1.096-8.989-0.441-12.91,1.842l-107.186,71.082 c-6.604,4.38-15.51,2.574-19.889-4.028c-4.381-6.605-2.577-15.51,4.029-19.89l107.483-71.28c0.172-0.115,0.349-0.227,0.527-0.333 c10.541-6.347,22.922-8.211,34.861-5.246c11.942,2.965,22.014,10.402,28.362,20.94c13.018,21.622,6.146,49.764-15.285,62.975 c-13.296,9.152-115.77,79.597-130.751,86.847c-14.716,7.122-30.476,14.076-47.12,14.076l-155.498,0.03 C156.752,473.492,156.749,473.492,156.747,473.492z"
                 ></path>
                 <rect
                   x="14.35"
                   y="250.215"
-                  style="fill:#F59E0B;"
+                  style="fill:#A16207;"
                   width="84.146"
                   height="189.587"></rect>
                 <path
-                  style="fill:#F59E0B;"
+                  style="fill:#A16207;"
                   d="M98.49,454.142H14.35c-7.925,0-14.35-6.424-14.35-14.35V250.209c0-7.925,6.424-14.35,14.35-14.35 h84.14c7.925,0,14.35,6.424,14.35,14.35V439.79C112.84,447.716,106.415,454.142,98.49,454.142z M28.699,425.442H84.14V264.559 H28.699V425.442z"
                 ></path>
                 <path
-                  style="fill:#F59E0B;"
+                  style="fill:#A16207;"
                   d="M352.57,227.758l55.285,29.065c7.478,3.932,16.218-2.418,14.79-10.745l-10.558-61.561l44.726-43.597 c6.05-5.898,2.712-16.172-5.649-17.386l-61.811-8.981L361.711,58.54c-3.74-7.577-14.542-7.577-18.281,0l-27.643,56.009 l-61.811,8.981c-8.36,1.215-11.699,11.49-5.649,17.386l44.726,43.597l-10.558,61.561c-1.428,8.327,7.313,14.677,14.79,10.745 L352.57,227.758z"
                 ></path>
                 <path
-                  style="fill:#F59E0B;"
+                  style="fill:#A16207;"
                   d="M412.6,272.365c-3.935,0-7.885-0.983-11.422-2.841L352.57,243.97l-48.608,25.555 c-3.536,1.858-7.486,2.841-11.422,2.841l0,0c-7.244,0-14.096-3.2-18.802-8.781c-4.649-5.516-6.612-12.781-5.387-19.933l9.284-54.127 l-39.324-38.331c-6.739-6.569-9.118-16.209-6.211-25.159c2.909-8.95,10.5-15.351,19.813-16.704l54.345-7.897l24.304-49.245 c4.166-8.439,12.599-13.681,22.009-13.681c9.412,0,17.845,5.242,22.009,13.682l24.304,49.244l54.346,7.897 c9.311,1.353,16.902,7.753,19.811,16.704c2.909,8.95,0.528,18.59-6.209,25.159l-39.324,38.331l9.283,54.125 c1.227,7.15-0.736,14.416-5.385,19.932C426.699,269.165,419.845,272.365,412.6,272.365z M352.57,213.408 c2.295,0,4.586,0.55,6.677,1.649l47.832,25.145l-9.135-53.26c-0.798-4.655,0.746-9.405,4.127-12.701l38.697-37.719l-53.478-7.772 c-4.674-0.679-8.713-3.615-10.804-7.849L352.57,72.442L328.655,120.9c-2.091,4.235-6.13,7.171-10.804,7.849l-53.477,7.772 l38.697,37.718c3.381,3.298,4.925,8.046,4.127,12.702l-9.135,53.26l47.83-25.145C347.984,213.958,350.277,213.408,352.57,213.408z"
                 ></path>
               </g></svg
@@ -141,7 +153,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div class="p-4 sm:w-1/2 w-full max-w-md">
-          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full">
+          <div
+            class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full hover:shadow-lg transition duration-300"
+          >
             <svg
               width="64px"
               height="64px"
@@ -155,12 +169,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
                 ><path
                   d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                  stroke="#F59E0B"
+                  stroke="#A16207"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"></path><path
                   d="M8 7H10.9999M16 7H10.9999M15.9999 10H13.9999M7.99695 10H13.4515H13.9999M10.9999 7C11.9999 7 13.9999 7.6 13.9999 10M12.9999 17L7.99695 13H10.9999C11.9999 13 13.9999 12.4 13.9999 10"
-                  stroke="#F59E0B"
+                  stroke="#A16207"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"></path></g
@@ -173,7 +187,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
         <div class="p-4 sm:w-1/2 w-full max-w-md">
-          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full">
+          <div
+            class="border-2 border-gray-200 px-4 py-6 rounded-lg min-h-full hover:shadow-lg transition duration-300"
+          >
             <svg
               width="64px"
               height="64px"
@@ -188,10 +204,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
                 <path
-                  fill="#F59E0B"
+                  fill="#A16207"
                   d="M12 6v-6h-8v6h-4v7h16v-7h-4zM7 12h-6v-5h2v1h2v-1h2v5zM5 6v-5h2v1h2v-1h2v5h-6zM15 12h-6v-5h2v1h2v-1h2v5z"
                 ></path>
-                <path fill="#F59E0B" d="M0 16h3v-1h10v1h3v-2h-16v2z"></path>
+                <path fill="#A16207" d="M0 16h3v-1h10v1h3v-2h-16v2z"></path>
               </g></svg
             >
             <h2 class="title-font font-medium text-3xl text-gray-900">
@@ -205,146 +221,573 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="text-gray-700 body-font border-t border-gray-200">
+    <ShopCarousel />
+  </section>
+
+  <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-16 mx-auto">
-      <div
-        class="flex flex-wrap w-full mb-20 flex-col items-center text-center"
-      >
+      <div class="text-center mb-16">
         <h1
-          class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+          class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4"
         >
-          Top-Quality Raw Materials for Shoemaking
+          Explore Our Categories
         </h1>
-        <p class="lg:w-1/2 w-full leading-relaxed text-base">
-          Browse some of our best-selling materials — from adhesives to threads,
-          we supply what your footwear business needs to succeed. Trusted by
-          local manufacturers and craftsmen alike.
+        <div class="w-16 h-1 rounded-full bg-yellow-700 mx-auto mb-4"></div>
+        <p
+          class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s"
+        >
+          Explore our carefully organized categories. Whether it's adhesives,
+          threads, or packaging—find exactly what your workshop needs.
         </p>
+        <!-- <div class="flex mt-6 justify-center">
+          <div class="w-16 h-1 rounded-full bg-yellow-700 inline-flex"></div>
+        </div> -->
       </div>
-      <div class="flex flex-wrap -m-4">
-        <!-- Product 1 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Adhesive Dunlop"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Adhesives
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Dunlop Adhesive
+      <div
+        class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"
+      >
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-46.08 -46.08 604.12 604.12"
+              xml:space="preserve"
+              width="64px"
+              height="64px"
+              fill="#000000"
+              transform="matrix(-1, 0, 0, 1, 0, 0)"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <rect
+                  x="341.311"
+                  y="255.568"
+                  style="fill:#424953;"
+                  width="149.32"
+                  height="127.96"></rect>
+                <path
+                  style="fill:#646C77;"
+                  d="M487.647,149.522c0,0-105.825,39.756-144.995,23.788c-18.031-7.343-27.312-63.74-51.592-38.35 C115.402,318.54,0,234.331,0,291.322c0,131.479,254.428,91.434,304.341,62.123c58.811-34.515,154.682-6.438,185.321-48.655 C540.989,234.042,487.647,149.522,487.647,149.522z"
+                ></path>
+                <g>
+                  <path
+                    style="fill:#CBD0D8;"
+                    d="M261.928,163.529c-5.438,4.984-10.797,9.71-16.109,14.203l25.922,23.296l0.016-0.008 c1.867,1.695,4.367,2.734,7.117,2.734c5.875,0,10.655-4.773,10.655-10.664c0-3.148-1.375-5.969-3.546-7.921l0.016-0.008 L261.928,163.529z"
+                  ></path>
+                  <path
+                    style="fill:#CBD0D8;"
+                    d="M248.663,220.737l0.016-0.008c1.891,1.766,4.453,2.859,7.25,2.859 c5.891,0,10.672-4.772,10.672-10.663c0-3.086-1.328-5.859-3.422-7.805l0.016-0.008l-23.75-22.069 c-5.75,4.718-11.437,9.14-17.015,13.312L248.663,220.737z"
+                  ></path>
+                  <path
+                    style="fill:#CBD0D8;"
+                    d="M225.819,240.456l0.016-0.008c1.906,1.789,4.469,2.891,7.297,2.891 c5.875,0,10.656-4.773,10.656-10.664c0-3.07-1.312-5.828-3.375-7.781v-0.008l-24.999-23.413 c-6.141,4.398-12.188,8.476-18.109,12.265L225.819,240.456z"
+                  ></path>
+                </g>
+              </g></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Upper Materials
             </h2>
-            <p class="mt-1">High-bond strength | 1L, 5L</p>
+            <p class="leading-relaxed text-base">
+              From foam and linings to reinforcements and eyelets—everything you
+              need to build the perfect upper.
+            </p>
           </div>
         </div>
 
-        <!-- Product 2 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Bag Silai Thread"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Threads
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Bag Silai Thread
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              height="64px"
+              width="64px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-46.08 -46.08 604.16 604.16"
+              xml:space="preserve"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <g>
+                  <path
+                    style="fill:#2485BB;"
+                    d="M422.552,423.724c-34.066,0-61.793-27.719-61.793-61.793c0-14.601-11.882-26.483-26.483-26.483 c-19.474,0-35.31-15.837-35.31-35.31c0-4.873,3.946-8.828,8.828-8.828s8.828,3.955,8.828,8.828c0,9.737,7.918,17.655,17.655,17.655 c24.338,0,44.138,19.8,44.138,44.138s19.8,44.138,44.138,44.138c24.338,0,44.138-19.8,44.138-44.138s-19.8-44.138-44.138-44.138 c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828c34.066,0,61.793,27.719,61.793,61.793S456.618,423.724,422.552,423.724 "
+                  ></path>
+                  <path
+                    style="fill:#439FDE;"
+                    d="M336.882,459.034H33.884c-3.866,0-6.797-3.478-6.135-7.283L96.207,58.121 c0.521-2.984,3.107-5.155,6.126-5.155h166.091c3.028,0,5.614,2.172,6.126,5.155l68.458,393.631 C343.67,455.556,340.74,459.034,336.882,459.034"
+                  ></path>
+                  <g>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M306.75,282.199L68.405,220.405l4.431-17.09l238.345,61.793L306.75,282.199z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M111.655,396.681l-70.621-26.483l6.206-16.534l70.621,26.483L111.655,396.681z"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      style="fill:#757575;"
+                      d="M229.518,52.966h-88.276v-39.45C141.242,6.056,147.298,0,154.757,0h61.246 c7.459,0,13.515,6.056,13.515,13.515V52.966z"
+                    ></path>
+                    <path
+                      style="fill:#757575;"
+                      d="M242.484,512H128.273c-7.459,0-13.515-6.056-13.515-13.515v-39.451h141.241v39.451 C255.999,505.944,249.952,512,242.484,512"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M194.276,52.966L87.444,108.518l-3.805,21.875l148.895-77.427H194.276z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M274.908,60.159L76.702,170.274l-3.884,22.351L278.112,78.573L274.908,60.159z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M283.504,109.587L101.568,213.02l8.722,15.342l176.428-100.299L283.504,109.587z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M291.759,157.05l-119.834,73.781l9.26,15.033l113.832-70.082L291.759,157.05z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M301.179,211.223l-67.098,37.049l8.527,15.457l61.775-34.101L301.179,211.223z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M28.588,446.931l284.954-164.634l-3.222-18.529L32.534,424.271L28.588,446.931z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M58.987,272.138l179.041,50.202l4.758-16.993L62.024,254.659L58.987,272.138z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M223.106,459.034l109.215-68.767l-3.275-18.803l-139.079,87.57H223.106z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M127.219,459.034l195.328-124.972l-0.009-0.026l-5.914-25.07L94.46,459.034H127.219z"
+                    ></path>
+                    <path
+                      style="fill:#2485BB;"
+                      d="M49.222,328.286l125.052,33.351l4.555-17.064l-126.57-33.748L49.222,328.286z"
+                    ></path>
+                  </g>
+                </g>
+              </g></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Threads, Tapes & Adhesives
             </h2>
-            <p class="mt-1">Durable polyester | Black & White</p>
+            <p class="leading-relaxed text-base">
+              Strong threads, versatile tapes, and industrial adhesives—built
+              for shoemaking that lasts.
+            </p>
           </div>
         </div>
 
-        <!-- Product 3 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Foam Sheet"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Foam
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              10mm Foam Sheet
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-46.08 -46.08 604.16 604.16"
+              xml:space="preserve"
+              width="64px"
+              height="64px"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <rect
+                  x="224.236"
+                  y="84.672"
+                  transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 251.8026 619.7746)"
+                  style="fill:#D7D5D9;"
+                  width="60.049"
+                  height="346.13"></rect>
+                <path
+                  style="fill:#FF3F62;"
+                  d="M301.182,253.278l-47.095,47.095c-8.99,8.99-8.99,23.701,0,32.692l153.555,153.555 c8.99,8.99,23.702,8.99,32.692,0l47.095-47.095c8.99-8.99,8.99-23.701,0-32.692L333.874,253.278 C324.884,244.288,310.173,244.288,301.182,253.278z"
+                ></path>
+                <polygon
+                  style="fill:#D7D5D9;"
+                  points="82.211,19.389 20.989,80.611 57.004,116.626 72.013,101.618 227.017,257.43 257.431,227.017 102.427,71.203 118.226,55.404 "
+                ></polygon>
+                <g>
+                  <rect
+                    x="327.715"
+                    y="127.531"
+                    transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 501.6223 516.2964)"
+                    style="opacity:0.3;fill:#3E3B43;enable-background:new ;"
+                    width="60.049"
+                    height="53.456"></rect>
+                  <rect
+                    x="129.012"
+                    y="331.181"
+                    transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 21.903 715.0185)"
+                    style="opacity:0.3;fill:#3E3B43;enable-background:new ;"
+                    width="60.049"
+                    height="43.584"></rect>
+                </g>
+                <g>
+                  <path
+                    style="fill:#77757E;"
+                    d="M488.276,74.56l-50.32,50.32l-50.837-50.835l50.32-50.32l-12.132-12.132 c-15.457-15.457-40.519-15.457-55.976,0l-44.664,44.664c-15.457,15.457-15.457,40.519,0,55.976l75.099,75.099 c15.457,15.457,40.519,15.457,55.976,0l44.665-44.665c15.457-15.457,15.457-40.519,0-55.976L488.276,74.56z"
+                  ></path>
+                  <path
+                    style="fill:#77757E;"
+                    d="M23.725,437.439l50.32-50.32l50.836,50.836l-50.32,50.32l12.132,12.132 c15.457,15.457,40.519,15.457,55.976,0l44.665-44.665c15.457-15.457,15.457-40.519,0-55.976l-75.099-75.099 c-15.457-15.457-40.519-15.457-55.976,0l-44.665,44.665c-15.457,15.457-15.457,40.519,0,55.976L23.725,437.439z"
+                  ></path>
+                </g>
+                <path
+                  style="fill:#C70024;"
+                  d="M301.182,253.278l-47.095,47.095c-8.99,8.99-8.99,23.701,0,32.692l16.919,16.919l79.787-79.787 l-16.919-16.919C324.884,244.288,310.173,244.288,301.182,253.278z"
+                ></path>
+                <g>
+                  <rect
+                    x="207.016"
+                    y="220.106"
+                    transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 551.4321 228.509)"
+                    style="opacity:0.3;fill:#3E3B43;enable-background:new ;"
+                    width="42.748"
+                    height="16.708"></rect>
+                  <rect
+                    x="21.519"
+                    y="44.57"
+                    transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 155.3011 62.1083)"
+                    style="opacity:0.07;fill:#3E3B43;enable-background:new ;"
+                    width="86.538"
+                    height="37.297"></rect>
+                </g>
+                <path
+                  style="fill:#FF728B;"
+                  d="M427.612,441.54L322.604,336.532c-4.069-4.069-4.069-10.668,0-14.738l0,0 c4.069-4.069,10.668-4.069,14.738,0L442.35,426.803c4.069,4.069,4.069,10.668,0,14.738l0,0 C438.281,445.61,431.682,445.61,427.612,441.54z"
+                ></path>
+              </g></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Tools & Hardware
             </h2>
-            <p class="mt-1">High-density EVA | 1m x 2m</p>
+            <p class="leading-relaxed text-base">
+              From scissors to glue guns, knives to hammers—essential tools for
+              every shoemaker’s bench.
+            </p>
           </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Brush"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Tools
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Heavy Duty Brush
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="-11.52 -11.52 151.04 151.04"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--noto"
+              preserveAspectRatio="xMidYMid meet"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><linearGradient
+                  id="IconifyId17ecdb2904d178eab20127"
+                  gradientUnits="userSpaceOnUse"
+                  x1="71.344"
+                  y1="36.678"
+                  x2="87.765"
+                  y2="40.597"
+                  ><stop offset=".038" stop-color="#0091ea"></stop><stop
+                    offset="1"
+                    stop-color="#01579b"></stop></linearGradient
+                ><path
+                  d="M61.25 37.89c9.85-3.61 20.04-7.33 28.5-8.86c1.23-.22 2.43-.4 3.58-.52c2.06-2.28 4.95-3.17 6.69-5.08c-3.22-.11-6.72.17-10.5.85c-8.99 1.62-19.44 5.44-29.54 9.14c-16.17 5.92-31.45 11.82-40.69 7.93c-2.26-.95-4.91-2.17-6.49-6.7c-3.35-9.55 6.53-21.73 15.59-23.95C46.3 6.3 49.17 23.68 49.17 23.68s1.19-.49.81-3.94c-.73-6.61-4.65-15.45-20.62-13.97C16.96 6.92 4.61 21.88 8.08 35.43c1.2 4.69 3.71 8.07 7.47 10.05c10.22 5.39 27.46-.92 45.7-7.59z"
+                  fill="url(#IconifyId17ecdb2904d178eab20127)"></path><path
+                  d="M121.22 6.51c-2.76-2.6-6.57-3.26-11.93-.15c-3.36 1.95-7.24 5.49-12.15 10.58c-8.17 8.49-74.33 82.43-91.03 101.72c-2.32 2.67-2.36 4.29-1.84 4.81c.52.52 1.94.39 4.75-1.95c19.22-16.04 92.96-81.16 102.27-90.43c4.16-4.14 7.67-7.88 9.18-9.67c5.14-6.12 4.02-11.82.75-14.91zM96.85 36.37c-1.41 1.41-3.11 2.22-4.31 1.02c-1.2-1.2-1.03-3.34.38-4.75l17.78-17.78c1.41-1.41 3.55-1.58 4.75-.38c1.2 1.2.59 2.7-.82 4.12L96.85 36.37z"
+                  fill="#bdbdbd"></path><path
+                  d="M100.15 18.07c5.55-5.91 9.5-9.56 12.82-11.06c6.17-2.78 9.13.42 8.85.11c-2.64-2.85-6.27-4.14-12.09-1c-3.45 1.86-7.26 5.27-12.59 10.82c-8.16 8.51-74.57 82.64-91.03 101.72c-2.31 2.68-2.49 4.44-1.66 4.88c16.74-19.14 87.63-96.88 95.7-105.47z"
+                  opacity=".75"
+                  fill="#b9e4ea"></path><linearGradient
+                  id="IconifyId17ecdb2904d178eab20128"
+                  gradientUnits="userSpaceOnUse"
+                  x1="102.241"
+                  y1="24.389"
+                  x2="110.843"
+                  y2="32.406"
+                  ><stop offset=".193" stop-color="#2f7889"></stop><stop
+                    offset=".838"
+                    stop-color="#2f7889"></stop></linearGradient
+                ><path
+                  d="M117.95 13.2c-2.57-1.58-4.9-.9-7.36 1.53c0 0 .19-.1.48-.19c1.4-1.15 3.32-1.24 4.44-.12c1.2 1.2.53 2.77-.88 4.18L96.85 36.37c-1.41 1.41-3.05 2.16-4.25.96c-1.2-1.2-1.03-3.34.38-4.75l.57-.57s-6.17 4.07-2.18 8.16c2.11 2.16 5.88.95 7.38-.6l18.99-19.51c1.51-1.54 2.79-5.27.21-6.86z"
+                  fill="url(#IconifyId17ecdb2904d178eab20128)"
+                ></path><linearGradient
+                  id="IconifyId17ecdb2904d178eab20129"
+                  gradientUnits="userSpaceOnUse"
+                  x1="74.302"
+                  y1="36.728"
+                  x2="74.116"
+                  y2="20.365"
+                  ><stop offset=".038" stop-color="#0091ea"></stop><stop
+                    offset="1"
+                    stop-color="#01579b"></stop></linearGradient
+                ><path
+                  d="M114.96 28.88c-5.15-5.3-13.16-5.3-13.16-5.3l-4.68 4.68c7-.35 11.15 1.27 14.79 4.8c4.21 4.07 5.44 10.41 4.8 14.9c-3.5 24.25-36.15 28.3-36.48 28.33c-28.88 3.34-44.56-8.49-53.03-20.18c0 0-.97 6.48 5.24 12.1c8.05 7.3 19.47 13.62 38.37 13.62c3.4 0 7.01-.21 10.85-.65c13.04-1.51 36.59-8.92 39.93-32.06c.81-5.6-.64-14.08-6.63-20.24z"
+                  fill="url(#IconifyId17ecdb2904d178eab20129)"></path></g
+              ></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Accessories & Fasteners
             </h2>
-            <p class="mt-1">Nylon bristles | Wooden grip</p>
+            <p class="leading-relaxed text-base">
+              Buckles, eyelets, rivets, punches, tags—everything that holds and
+              finishes your footwear right.
+            </p>
           </div>
         </div>
 
-        <!-- Product 5 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Elastic"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Elastic
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Shoe Elastic Roll
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="0 0 64.00 64.00"
+              data-name="Layer 1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><defs
+                  ><style>
+                    .cls-1 {
+                      fill: #f5dd90;
+                    }
+                    .cls-2 {
+                      fill: #f76c5e;
+                    }
+                    .cls-3 {
+                      fill: #6096ba;
+                    }
+                    .cls-4 {
+                      fill: #274c77;
+                    }
+                  </style></defs
+                ><path
+                  class="cls-4"
+                  d="M21.39,48.26l-9.9,4.24,4.24-9.9L46.85,11.49c1.56-1.56,4.09-1.56,5.66,0h0c1.56,1.56,1.56,4.09,0,5.66l-31.11,31.11Z"
+                ></path><polyline
+                  class="cls-3"
+                  points="38.36 31.29 56.04 48.97 48.97 56.04 31.29 38.36"
+                ></polyline><polyline
+                  class="cls-3"
+                  points="25.64 32.71 7.96 15.03 15.03 7.96 32.71 25.64"
+                ></polyline><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-8.05 13.44) rotate(-45)"
+                  width="4"
+                  x="10.2"
+                  y="15.44"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-9.23 16.27) rotate(-45)"
+                  width="4"
+                  x="13.03"
+                  y="18.27"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-10.4 19.1) rotate(-45)"
+                  width="4"
+                  x="15.86"
+                  y="21.1"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-11.57 21.93) rotate(-45)"
+                  width="4"
+                  x="18.69"
+                  y="23.93"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-12.74 24.76) rotate(-45)"
+                  width="4"
+                  x="21.51"
+                  y="26.76"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-17.43 36.07) rotate(-45)"
+                  width="4"
+                  x="32.83"
+                  y="38.07"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-18.6 38.9) rotate(-45)"
+                  width="4"
+                  x="35.66"
+                  y="40.9"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-19.77 41.73) rotate(-45)"
+                  width="4"
+                  x="38.49"
+                  y="43.73"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-20.94 44.56) rotate(-45)"
+                  width="4"
+                  x="41.31"
+                  y="46.56"></rect><rect
+                  class="cls-1"
+                  height="2"
+                  transform="translate(-22.11 47.38) rotate(-45)"
+                  width="4"
+                  x="44.14"
+                  y="49.38"></rect><path
+                  class="cls-2"
+                  d="M45.44,12.91l5.66,5.66h0s1.42-1.41,1.42-1.41c.78-.78,1.17-1.8,1.17-2.83s-.39-2.04-1.17-2.83c-1.57-1.56-4.1-1.56-5.66,0l-1.41,1.42h0Z"
+                ></path><polygon
+                  class="cls-2"
+                  points="21.39 48.26 15.74 42.61 15.74 42.61 11.49 52.51 21.39 48.26 21.39 48.26"
+                ></polygon><rect
+                  class="cls-3"
+                  height="2"
+                  transform="translate(-11.84 32.59) rotate(-45)"
+                  width="42"
+                  x="12.41"
+                  y="29.59"></rect></g
+              ></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Packaging & Stationery
             </h2>
-            <p class="mt-1">Sizes 10mm–50mm | Multiple colors</p>
+            <p class="leading-relaxed text-base">
+              Boxes, tags, staplers, sutli, and more—materials to pack, label,
+              and organize your inventory.
+            </p>
           </div>
         </div>
 
-        <!-- Product 6 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Tag Pins"
-              class="object-cover object-center w-full h-full block"
-              src="/images/products/tag-pin.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-yellow-800 text-xs tracking-widest title-font mb-1">
-              Accessories
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Tag Pins
+        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+          <div
+            class="w-20 h-20 inline-flex items-center justify-center rounded-full border border-[3px] text-indigo-500 mb-5 flex-shrink-0"
+          >
+            <svg
+              height="64px"
+              width="64px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-40.96 -40.96 593.92 593.92"
+              xml:space="preserve"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <g transform="translate(0 -1)">
+                  <path
+                    style="fill:#787878;"
+                    d="M123.471,428.524C394.92,487.016,512,415.786,512,415.786v26.483 c-141.056,87.605-377.785,18.211-379.586,17.752l-8.828,8.828H0v-44.138l85.442-0.097 C98.216,424.613,110.98,425.832,123.471,428.524"
+                  ></path>
+                  <path
+                    style="fill:#0a3061;"
+                    d="M512.002,415.912c-2.763-16.534-26.483-26.509-26.483-26.509s-141.974-2.207-185.379-52.966 c-43.405-50.759-88.276-61.793-88.276-61.793l-17.655,17.655C83.131,400.437,17.657,309.954,17.657,309.954 c-33.439,51.447-8.872,114.635-8.828,114.741l76.615-0.088c12.774,0,25.538,1.227,38.02,3.919 c271.457,58.492,388.537-12.747,388.537-12.747V415.912z"
+                  ></path>
+                  <path
+                    style="fill:#787878;"
+                    d="M310.51,346.253L310.51,346.253c-3.858-3.063-7.371-6.312-10.372-9.816 c-43.405-50.759-88.276-61.793-88.276-61.793l-17.655,17.655c-5.87,5.711-11.582,10.752-17.196,15.404l55.314,45.859 C255.929,373.133,290.94,369.858,310.51,346.253"
+                  ></path>
+                  <g>
+                    <path
+                      style="fill:#0a3061;"
+                      d="M229.519,318.779c-2.26,0-4.52-0.865-6.241-2.587c-3.452-3.452-3.452-9.031,0-12.482l17.655-17.655 c3.452-3.452,9.031-3.452,12.482,0c3.452,3.452,3.452,9.031,0,12.482l-17.655,17.655 C234.039,317.913,231.779,318.779,229.519,318.779"
+                    ></path>
+                    <path
+                      style="fill:#0a3061;"
+                      d="M256.002,345.248c-2.26,0-4.511-0.865-6.241-2.578c-3.443-3.452-3.452-9.039-0.009-12.491 l22.334-22.36c3.443-3.46,9.031-3.46,12.482-0.009c3.452,3.443,3.452,9.031,0.009,12.482l-22.325,22.369 C260.521,344.383,258.262,345.248,256.002,345.248"
+                    ></path>
+                  </g>
+                  <path
+                    style="fill:#787878;"
+                    d="M388.532,181.352C117.084,239.843,0.004,168.613,0.004,168.613v26.483 c141.056,87.605,377.785,18.211,379.586,17.752l8.828,8.828h123.586v-44.138l-85.442-0.097 C413.788,177.441,401.023,178.659,388.532,181.352"
+                  ></path>
+                  <path
+                    style="fill:#0a3061;"
+                    d="M0.002,168.74c2.763-16.534,26.483-26.509,26.483-26.509s141.974-2.207,185.379-52.966 s88.276-61.793,88.276-61.793l17.655,17.655c111.078,108.138,176.552,17.655,176.552,17.655 c33.439,51.447,8.872,114.635,8.828,114.741l-76.615-0.088c-12.773,0-25.538,1.227-38.029,3.919 C117.082,239.846,0.002,168.607,0.002,168.607V168.74z"
+                  ></path>
+                  <path
+                    style="fill:#787878;"
+                    d="M201.493,99.08L201.493,99.08c3.858-3.063,7.371-6.312,10.372-9.816 c43.396-50.759,88.276-61.793,88.276-61.793l17.655,17.655c5.87,5.711,11.582,10.752,17.196,15.404l-55.314,45.859 C256.074,125.96,221.064,122.685,201.493,99.08"
+                  ></path>
+                  <g>
+                    <path
+                      style="fill:#0a3061;"
+                      d="M282.485,71.606c-2.26,0-4.52-0.865-6.241-2.586l-17.655-17.655c-3.452-3.452-3.452-9.031,0-12.482 c3.452-3.452,9.031-3.452,12.482,0l17.655,17.655c3.452,3.452,3.452,9.031,0,12.482C287.004,70.741,284.744,71.606,282.485,71.606 "
+                    ></path>
+                    <path
+                      style="fill:#0a3061;"
+                      d="M256.002,98.076c-2.26,0-4.52-0.865-6.25-2.586L227.427,73.12 c-3.443-3.452-3.443-9.039,0.009-12.482c3.443-3.443,9.031-3.452,12.482,0.009l22.334,22.36c3.443,3.452,3.434,9.039-0.009,12.491 C260.513,97.211,258.262,98.076,256.002,98.076"
+                    ></path>
+                  </g>
+                </g>
+              </g></svg
+            >
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+              Sole & Insole Materials
             </h2>
-            <p class="mt-1">25mm, 35mm, 65mm | Transparent</p>
+            <p class="leading-relaxed text-base">
+              Foam, board, and fillers for durable soles and cushioned
+              insoles—comfort and strength combined.
+            </p>
           </div>
         </div>
       </div>
-
       <div class="flex justify-center mt-10">
         <a
-          href="/product"
+          href="/products"
           class="inline-block text-yellow-700 hover:underline font-medium"
         >
           View All Products →
@@ -357,46 +800,184 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="container px-5 py-16 pb-8 mx-auto">
       <div class="flex flex-wrap w-full mb-8 flex-col items-center text-center">
         <h1
-          class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+          class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
         >
           Contact Us
         </h1>
+        <div class="w-16 h-1 rounded-full bg-yellow-700 mx-auto mb-4"></div>
         <p class="lg:w-1/2 w-full mb-8 leading-relaxed text-base">
-          Reach out to us for bulk orders, pricing, or custom sourcing. We’re
+          Reach out to us for bulk orders, pricing, or custom sourcing. We're
           happy to help your business step ahead.
         </p>
-        <!-- <p>🏢 504, MIE Part-A, Bahadurgarh, Haryana, India</p> -->
-        <p>
-          🏢
-          <a href="/contact" class="text-700 hover:underline">
+        <p class="mb-2 flex items-center space-x-2">
+          <span class="flex items-center">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--fxemoji mr-2"
+              preserveAspectRatio="xMidYMid meet"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><path
+                  fill="#C8CACB"
+                  d="M267.04 104.384H18.654c-7.953 0-14.4 6.447-14.4 14.4v375.814c0 7.953 6.447 14.4 14.4 14.4H267.04c7.953 0 14.4-6.447 14.4-14.4V118.784c0-7.953-6.447-14.4-14.4-14.4z"
+                ></path><path
+                  fill="#A6AFB2"
+                  d="M480.279 36.657H143.331c-5.442 0-9.853 5.681-9.853 12.688V496.31c0 7.008 4.411 12.688 9.853 12.688h336.948c5.442 0 9.853-5.681 9.853-12.688V49.346c0-7.008-4.412-12.689-9.853-12.689z"
+                ></path><path
+                  fill="#597B91"
+                  d="M268.756 405h86.097v103.999h-86.097z"></path><path
+                  fill="#C8CACB"
+                  d="M410.15 459.001h-19.176a9.362 9.362 0 1 1 0-18.724h19.176a9.363 9.363 0 0 1 0 18.724z"
+                ></path><path
+                  fill="#597B91"
+                  d="M505.081 42.854v-6.549a7.2 7.2 0 0 0-7.2-7.2H125.729a7.2 7.2 0 0 0-7.2 7.2v6.549a7.2 7.2 0 0 0 7.2 7.2H497.88a7.2 7.2 0 0 0 7.201-7.2z"
+                ></path><path
+                  fill="#FF473E"
+                  d="M357.901 427.272c6.811 0 11.68-6.405 10.147-13.041c-5.912-25.598-28.849-44.682-56.244-44.682s-50.332 19.083-56.244 44.682c-1.533 6.637 3.336 13.041 10.147 13.041h92.194z"
+                ></path><path
+                  fill="#466677"
+                  d="M268.756 427.272h86.097v22.007h-86.097z"></path><path
+                  fill="#2B3B47"
+                  d="M222.443 183.746h-23.976a7.2 7.2 0 0 1-7.2-7.2v-74.027a7.2 7.2 0 0 1 7.2-7.2h23.976a7.2 7.2 0 0 1 7.2 7.2v74.027a7.2 7.2 0 0 1-7.2 7.2zm74.32-7.2v-74.027a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v74.027a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm67.119 0v-74.027a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v74.027a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm67.119 0v-74.027a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v74.027a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm-134.238 89.482v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm67.119 0v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm-67.119 73.627v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm67.119 0v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm-134.239-73.627v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm201.358 0v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm-201.358 73.627v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm201.358 0v-23.764a7.2 7.2 0 0 0-7.2-7.2h-23.976a7.2 7.2 0 0 0-7.2 7.2v23.764a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zM88.354 230.68v-54.386a7.2 7.2 0 0 0-7.2-7.2H57.178a7.2 7.2 0 0 0-7.2 7.2v54.386a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm0 113.025v-54.386a7.2 7.2 0 0 0-7.2-7.2H57.178a7.2 7.2 0 0 0-7.2 7.2v54.386a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2zm0 113.025v-54.386a7.2 7.2 0 0 0-7.2-7.2H57.178a7.2 7.2 0 0 0-7.2 7.2v54.386a7.2 7.2 0 0 0 7.2 7.2h23.976a7.2 7.2 0 0 0 7.2-7.2z"
+                ></path><path
+                  fill="#A6AFB2"
+                  d="M88.452 237.88H49.881a5.752 5.752 0 0 1-5.752-5.752v-3.146a5.752 5.752 0 0 1 5.752-5.752h38.571a5.752 5.752 0 0 1 5.752 5.752v3.146a5.752 5.752 0 0 1-5.752 5.752zm5.752 107.272v-3.146a5.752 5.752 0 0 0-5.752-5.752H49.881a5.752 5.752 0 0 0-5.752 5.752v3.146a5.753 5.753 0 0 0 5.752 5.753h38.571a5.753 5.753 0 0 0 5.752-5.753zm0 113.025v-3.146a5.752 5.752 0 0 0-5.752-5.752H49.881a5.752 5.752 0 0 0-5.752 5.752v3.146a5.753 5.753 0 0 0 5.752 5.753h38.571a5.753 5.753 0 0 0 5.752-5.753z"
+                ></path><path
+                  fill="#899396"
+                  d="M230.319 183.746h-38.571a5.752 5.752 0 0 1-5.752-5.752v-3.146a5.752 5.752 0 0 1 5.752-5.752h38.571a5.752 5.752 0 0 1 5.752 5.752v3.146a5.752 5.752 0 0 1-5.752 5.752zm72.293-5.752v-3.146a5.752 5.752 0 0 0-5.752-5.752h-38.571a5.752 5.752 0 0 0-5.752 5.752v3.146a5.752 5.752 0 0 0 5.752 5.752h38.571a5.752 5.752 0 0 0 5.752-5.752zm66.541 0v-3.146a5.752 5.752 0 0 0-5.752-5.752H324.83a5.753 5.753 0 0 0-5.753 5.752v3.146a5.752 5.752 0 0 0 5.753 5.752h38.571a5.752 5.752 0 0 0 5.752-5.752zm66.541 0v-3.146a5.752 5.752 0 0 0-5.753-5.752H391.37a5.752 5.752 0 0 0-5.752 5.752v3.146a5.752 5.752 0 0 0 5.752 5.752h38.571a5.752 5.752 0 0 0 5.753-5.752z"
+                ></path></g
+              ></svg
+            >
+            <strong>Address:</strong>
+          </span>
+          <a href="/contact-us" class="hover:underline">
             504, MIE Part-A, Bahadurgarh, Haryana, India
           </a>
         </p>
-        <p>
-          📞
-          <a href="tel:+919315609098" class="text-700 hover:underline">
-            Mob: +91 - 9315609098
+
+        <p class="mb-2 flex items-center space-x-2">
+          <span class="flex items-center">
+            <svg
+              fill="#a30000"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#a30000"
+              class="mr-2"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><path
+                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
+                ></path></g
+              ></svg
+            >
+            <strong>Phone:</strong>
+          </span>
+          <a href="tel:+919315609098" class="hover:underline">
+            +91-9315609098
           </a>
         </p>
-        <p>
-          💬
-          <a href="https://wa.me/919315609098" class="text-700 hover:underline">
-            WhatsApp: +91 - 9315609098
+
+        <p class="mb-2 flex items-center space-x-2">
+          <span class="flex items-center">
+            <svg
+              fill="#a30000"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#a30000"
+              class="mr-2"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><path
+                  d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
+                ></path></g
+              ></svg
+            >
+            <strong>Phone:</strong>
+          </span>
+          <a href="tel:+918168478237" class="hover:underline">
+            +91-8168478237
           </a>
         </p>
-        <p>
-          📧
+
+        <p class="mb-2 flex items-center space-x-2">
+          <span class="flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="#25D366"
+              class="mr-2"
+            >
+              <path
+                d="M12.04 2C6.49 2 2 6.49 2 12.04c0 2.12.64 4.09 1.73 5.73L2 22l4.4-1.15a10.02 10.02 0 0 0 5.64 1.69c5.55 0 10.04-4.49 10.04-10.04S17.59 2 12.04 2zm5.87 14.26c-.25.7-1.44 1.36-1.99 1.45-.51.1-1.17.14-1.89-.12-.44-.17-1-.36-1.72-.72a14.45 14.45 0 0 1-3.54-3.12A13.94 13.94 0 0 1 7.2 10.4c-.22-.35-.36-.77-.4-1.1-.1-.86.32-1.36.48-1.55.13-.17.3-.22.4-.23.1 0 .2-.01.3-.01.1 0 .24 0 .37.28.15.34.5 1.16.55 1.24.05.08.08.17.02.27-.14.25-.4.57-.55.77-.08.1-.16.2-.07.38.2.34.93 1.55 2.06 2.52 1.42 1.23 2.6 1.61 3.01 1.78.12.05.26.04.35-.06.12-.14.41-.5.52-.67.13-.18.23-.15.38-.09.16.05 1.04.49 1.21.58.17.09.28.13.32.2.04.06.04.73-.21 1.43z"
+              ></path>
+            </svg>
+            <strong>WhatsApp:</strong>
+          </span>
+          <a href="https://wa.me/919315609098" class="hover:underline">
+            +91-9315609098
+          </a>
+        </p>
+
+        <p class="mb-2 flex items-center space-x-2">
+          <span class="flex items-center">
+            <svg
+              fill="#000000"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              id="email"
+              data-name="Flat Color"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon flat-color mr-2"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+                ><rect
+                  id="primary"
+                  x="2"
+                  y="4"
+                  width="20"
+                  height="16"
+                  rx="2"
+                  style="fill: #ffcf66;"></rect><path
+                  id="secondary"
+                  d="M21.25,4.45A2,2,0,0,0,20,4H4a2,2,0,0,0-1.25.45A1,1,0,0,0,2.76,6l8,6.29a2,2,0,0,0,2.48,0l8-6.29a1,1,0,0,0,0-1.56Z"
+                  style="fill: #fba123;"></path></g
+              ></svg
+            >
+            <strong>Email:</strong>
+          </span>
           <a
-            href="mailto:info@Shoe-Materials.com"
-            class="text-700 hover:underline"
+            href="mailto:supremetrading2@gmail.com"
+            class="hover:underline break-all"
           >
-            Email: supremetrading2@gmail.com
+            supremetrading2@gmail.com
           </a>
         </p>
       </div>
       <div class="flex justify-center">
         <a
-          href="/product"
+          href="/contact-us"
           class="inline-block text-yellow-700 hover:underline font-medium"
         >
           Get in touch with us →
@@ -404,37 +985,4 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
-
-  <!-- <section class="bg-yellow-50 py-6">
-    <div class="container mx-auto px-5 text-center">
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">
-        Looking to place an order or need help?
-      </h3>
-      <a href="/contact" class="text-yellow-700 hover:underline font-medium">
-        Get in touch with us →
-      </a>
-    </div>
-  </section> -->
-
-  <!-- <h2 class="text-xl font-semibold mb-4">Welcome to Supreme Trading Company</h2>
-  <p class="mb-2">
-    We are a wholesale supplier of high-quality raw materials for the shoe
-    industry in Bahadurgarh.
-  </p>
-  <p class="mb-6">
-    <strong>Contact:</strong>
-    <a href="tel:9315609098" class="text-blue-600 underline">9315609098</a> | <a
-      href="https://wa.me/919315609098"
-      class="text-green-600 underline">WhatsApp Us</a>
-  </p>
-
-  <h3 class="text-lg font-semibold mt-6 mb-2">Popular Products</h3>
-  <ul class="list-disc list-inside grid grid-cols-2 gap-1 text-sm">
-    <li>Adhesive Dunlap</li>
-    <li>Bag Silai Thread</li>
-    <li>Foam Sheet 10mm</li>
-    <li>Brush Heavy</li>
-    <li>Elastic [10mm-50mm]</li>
-    <li>Tag Pin [25, 35, 65mm]</li>
-  </ul> -->
 </BaseLayout>
