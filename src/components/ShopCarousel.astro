@@ -20,35 +20,92 @@ import "swiper/css/pagination";
 
   <div class="swiper mySwiper relative rounded-lg overflow-hidden">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
         <img
-          src="/images/store.jpg"
-          loading="lazy"
-          class="w-full h-[300px] md:h-[500px] object-cover"
+          src="/images/1.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
           alt="Shop Image 1"
         />
+        <div class="absolute inset-0 z-10"></div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
         <img
-          src="/images/store-2.jpg"
-          loading="lazy"
-          class="w-full h-[300px] md:h-[500px] object-cover"
+          src="/images/2.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
           alt="Shop Image 2"
         />
+        <div class="absolute inset-0 z-10"></div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
         <img
-          src="/images/nitro.jpg"
-          loading="lazy"
-          class="w-full h-[300px] md:h-[500px] object-cover"
+          src="/images/3.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
           alt="Shop Image 3"
         />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/4.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/5.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/6.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/7.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/8.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
+      </div>
+      <div class="swiper-slide relative select-none"
+        oncontextmenu="return false">
+        <img
+          src="/images/9.jpg"
+          class="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
+          alt="Shop Image 3"
+        />
+        <div class="absolute inset-0 z-10"></div>
       </div>
     </div>
 
-    <div class="swiper-pagination mt-4"></div>
-    <div class="swiper-button-next !text-yellow-700 z-10"></div>
-    <div class="swiper-button-prev !text-yellow-700 z-10"></div>
+    <div class="swiper-pagination !text-gray-300 mt-4"></div>
+    <div class="swiper-button-next !text-gray-300 z-10"></div>
+    <div class="swiper-button-prev !text-gray-300 z-10"></div>
   </div>
 </div>
 
@@ -83,3 +140,14 @@ import "swiper/css/pagination";
     });
   }
 </script>
+
+<style>
+  :global(.swiper-pagination-bullet) {
+    background-color: #d1d5db !important; /* Tailwind: gray-300 */
+    opacity: 1 !important;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: #946e54 !important; /* Tailwind: yellow-400 */
+  }
+</style>

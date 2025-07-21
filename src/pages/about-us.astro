@@ -14,13 +14,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="flex flex-col md:flex-row md:items-center mb-8">
         <!-- Photo -->
         <div
-          class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-yellow-500 mb-4 md:mb-0 md:mr-6"
+          class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-yellow-500 mb-4 md:mb-0 md:mr-6 relative select-none"
+          oncontextmenu="return false"
         >
           <img
-            src="images/founder-2.jpg"
+            
+            src="images/founder.jpg"
             alt="Founder Photo"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 z-10"></div>
         </div>
 
         <!-- Quote -->

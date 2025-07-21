@@ -40,12 +40,16 @@ import ShopCarousel from "../components/ShopCarousel.astro";
           </a>
         </div>
       </div>
-      <div class="lg:max-w-xl lg:w-2/3 md:w-1/2 w-5/6 mt-8 md:mt-0">
+      <div
+        class="lg:max-w-xl lg:w-2/3 md:w-1/2 w-5/6 mt-8 md:mt-0 relative select-none"
+        oncontextmenu="return false"
+      >
         <img
-          class="object-cover object-center rounded"
-          alt="Store Image"
           src="/images/store.jpg"
+          alt="Store Image"
+          class="object-cover object-center rounded w-full pointer-events-none"
         />
+        <div class="absolute inset-0 z-10"></div>
       </div>
     </div>
   </section>

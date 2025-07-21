@@ -1,0 +1,116 @@
+---
+// For Astro, if using
+title: "Products - Supreme Trading Company";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="text-gray-700 body-font bg-white py-12 py-12">
+    <div class="container px-5 mx-auto">
+      <!-- Heading -->
+      <h2 class="sm:text-4xl text-3xl font-bold text-gray-900 mb-8 text-center">
+        Products
+      </h2>
+
+      <!-- Search Bar -->
+      <div class="flex justify-center mb-10">
+        <input
+          type="text"
+          placeholder="Search products..."
+          class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600"
+        />
+      </div>
+
+      <!-- Product Grid -->
+      <div class="flex flex-wrap -m-4">
+        <!-- Product Tile 1 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="Adhesive"
+              class="object-cover object-center w-full h-full block"
+              src="/images/adhesive.jpg"
+            />
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              CATEGORY: Adhesive
+            </h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">
+              Premium Glue
+            </h2>
+            <p class="text-sm text-gray-600 mt-1">
+              Sub-type: PU & Rubber-based
+            </p>
+            <p class="text-sm text-gray-600">Available: 1L, 5L, 20L</p>
+          </div>
+        </div>
+
+        <!-- Product Tile 2 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="Thread"
+              class="object-cover object-center w-full h-full block"
+              src="/images/thread.jpg"
+            />
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              CATEGORY: Thread
+            </h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">
+              Heavy-Duty Thread
+            </h2>
+            <p class="text-sm text-gray-600 mt-1">
+              Sub-type: Nylon, Cotton, Bonded
+            </p>
+            <p class="text-sm text-gray-600">Quantity: 100m, 500m spools</p>
+          </div>
+        </div>
+
+        <!-- Product Tile 3 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="Foam"
+              class="object-cover object-center w-full h-full block"
+              src="/images/foam.jpg"
+            />
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              CATEGORY: Foam
+            </h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">
+              Sole Cushion Foam
+            </h2>
+            <p class="text-sm text-gray-600 mt-1">Sub-type: EVA, PU, Latex</p>
+            <p class="text-sm text-gray-600">Sheets: 2mm to 10mm</p>
+          </div>
+        </div>
+
+        <!-- Product Tile 4 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="Buckles"
+              class="object-cover object-center w-full h-full block"
+              src="/images/buckles.jpg"
+            />
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              CATEGORY: Accessories
+            </h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">
+              Metal & Plastic Buckles
+            </h2>
+            <p class="text-sm text-gray-600 mt-1">Sub-type: Round, Pin, Snap</p>
+            <p class="text-sm text-gray-600">Sizes: 1/2" to 2"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
