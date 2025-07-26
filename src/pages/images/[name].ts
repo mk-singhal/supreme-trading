@@ -10,7 +10,6 @@ export async function GET({ params, request }) {
   }
 
   const referer = request.headers.get("referer");
-  
   const allowedReferers = ["http://localhost:4321"];
 
   const isAllowed = referer && allowedReferers.some((r) => referer.startsWith(r));
@@ -20,9 +19,21 @@ export async function GET({ params, request }) {
   }
 
   const safeName = path.basename(imageName);
-  const filePath = path.resolve(`./src/assets/protected-images/${safeName}`);
+  const searchFolders = [
+    path.resolve(`./src/assets/protected-images/`),
+    path.resolve(`./src/assets/protected-images/product`),
+  ];
 
-  if (!fs.existsSync(filePath)) {
+  let filePath = "";
+  for (const folder of searchFolders) {
+    const fullPath = path.join(folder, safeName);
+    if (fs.existsSync(fullPath)) {
+      filePath = fullPath;
+      break;
+    }
+  }
+
+  if (!filePath) {
     return new Response("Not found", { status: 404 });
   }
 

@@ -1,0 +1,892 @@
+[
+  {
+    "image": "/images/aluminium_tape.webp",
+    "alt": "Aluminium Tape",
+    "title": "Aluminium Tape",
+    "aliases": [
+      "aluminium tape"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/apsra_white_pencil.webp",
+    "alt": "Apsra White Pencil",
+    "title": "Apsra White Pencil",
+    "aliases": [
+      "apsra white pencil",
+      "glass marking pencil"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/bipco_blade.webp",
+    "alt": "Bipco Blade",
+    "title": "Bipco Blade",
+    "aliases": [
+      "bipco blade",
+      "high speed blade"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/black_pencil.webp",
+    "alt": "Black Pencil",
+    "title": "Black Pencil",
+    "aliases": [
+      "black pencil",
+      "natraj pencil"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/bodam.webp",
+    "alt": "Bodam",
+    "title": "Bodam",
+    "aliases": [
+      "bodam",
+      "teen tanga",
+      "3 tanga"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/box.webp",
+    "alt": "Box",
+    "title": "Box",
+    "aliases": [
+      "box",
+      "dabba"
+    ],
+    "details": "Available: 0.5 kg, 1 kg, 2 kg, 5 kg, 10 kg"
+  },
+  {
+    "image": "/images/brown_tape.webp",
+    "alt": "Brown Tape",
+    "title": "Brown Tape",
+    "aliases": [
+      "brown tape",
+      "carton tape"
+    ],
+    "details": "Available: 2 inch & 3 inch"
+  },
+  {
+    "image": "/images/brush.webp",
+    "image_1": "/images/half_inch_brush.webp",
+    "image_2": "/images/iron.webp",
+    "alt": "Brush",
+    "title": "Brush",
+    "aliases": [
+      "brush"
+    ],
+    "subType": "Half-inch, 1 inch, Gol Brush, Zero Brush, Iron Brush, Tooth Brush",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/buckle.webp",
+    "alt": "Buckle",
+    "title": "Buckle",
+    "aliases": [
+      "buckle",
+      "school shoe buckle"
+    ],
+    "details": "Available: 16 mm, 18 mm, 20 mm in Black & White"
+  },
+  {
+    "image": "/images/color_loopie.webp",
+    "alt": "Color Loopie",
+    "title": "Color Loopie",
+    "aliases": [
+      "color loopie"
+    ],
+    "details": "Available: 6 mm to 16 mm all sizes"
+  },
+  {
+    "image": "/images/color_sootli.webp",
+    "alt": "Color Sootli",
+    "title": "Color Sootli",
+    "aliases": [
+      "color sootli"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/cotton.webp",
+    "alt": "Cotton",
+    "title": "Cotton",
+    "aliases": [
+      "cotton",
+      "rui"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/cotton_tape.webp",
+    "alt": "Cotton Tape",
+    "title": "Cotton Tape",
+    "aliases": [
+      "cotton tape"
+    ],
+    "details": "Available: 18mm & 24 mm"
+  },
+  {
+    "image": "/images/crap.webp",
+    "alt": "Crap",
+    "title": "Crap",
+    "aliases": [
+      "crap",
+      "crep"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/cutting_sheet.webp",
+    "alt": "Cutting Sheet",
+    "title": "Cutting Sheet",
+    "aliases": [
+      "cutting sheet",
+      "cutting mat"
+    ],
+    "details": "Available: A3 & A2"
+  },
+  {
+    "image": "/images/dasta.webp",
+    "alt": "Dasta",
+    "title": "Dasta",
+    "aliases": [
+      "dasta"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/dastana.webp",
+    "alt": "Dastana",
+    "title": "Dastana",
+    "aliases": [
+      "dastana"
+    ],
+    "details": "Available: Black & White"
+  },
+  {
+    "image": "/images/dunlup.webp",
+    "alt": "Dunlup",
+    "title": "Dunlup",
+    "aliases": [
+      "dunlup"
+    ],
+    "details": "Available: 5Ltr & 25 Ltr"
+  },
+  {
+    "image": "/images/elastic_doori.webp",
+    "alt": "Elastic Doori",
+    "title": "Elastic Doori",
+    "aliases": [
+      "elastic doori"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/elastic_line.webp",
+    "alt": "Elastic Line",
+    "title": "Elastic Line",
+    "aliases": [
+      "elastic line"
+    ],
+    "details": "Available: In all sizes and designs"
+  },
+  {
+    "image": "/images/elfiee.webp",
+    "alt": "Elfiee",
+    "title": "Elfiee",
+    "aliases": [
+      "elfiee"
+    ],
+    "subType": "Plain and Sumo",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/ezee.webp",
+    "alt": "Ezee",
+    "title": "Ezee",
+    "aliases": [
+      "ezee"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/flower_elastic.webp",
+    "alt": "Flower Elastic",
+    "title": "Flower Elastic",
+    "aliases": [
+      "flower elastic"
+    ],
+    "details": "Available: In all sizes and designs"
+  },
+  {
+    "image": "/images/fluid_pen.webp",
+    "alt": "Fluid Pen",
+    "title": "Fluid Pen",
+    "aliases": [
+      "fluid pen"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/foam.webp",
+    "alt": "Foam",
+    "title": "Foam",
+    "aliases": [
+      "foam"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/ghadi_chap.webp",
+    "alt": "Ghadi Chap",
+    "title": "Ghadi Chap",
+    "aliases": [
+      "ghadi chap patri",
+      "sharping stone"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/glue_gun.webp",
+    "alt": "Glue Gun",
+    "title": "Glue Gun",
+    "aliases": [
+      "glue gun"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/glue_stick.webp",
+    "alt": "Glue Stick",
+    "title": "Glue Stick",
+    "aliases": [
+      "glue stick"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/hand_brush.webp",
+    "alt": "Hand Brush",
+    "title": "Hand Brush",
+    "aliases": [
+      "hand brush"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/hand_tag.webp",
+    "alt": "Hand Tag",
+    "title": "Hand Tag",
+    "aliases": [
+      "hand tag"
+    ],
+    "details": "Available: 3 inch, 5 inch, 7 inch, 9 inch, 11 inch"
+  },
+  {
+    "image": "/images/heater.webp",
+    "alt": "Heater",
+    "title": "Heater",
+    "aliases": [
+      "heater"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/heater_wire.webp",
+    "alt": "Heater Wire",
+    "title": "Heater Wire",
+    "aliases": [
+      "heater wire"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/hook.webp",
+    "alt": "Hook",
+    "title": "Hook",
+    "aliases": [
+      "hook",
+      "z16",
+      "z-16",
+      "shuttle"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/ice_pick.webp",
+    "alt": "Ice Pick",
+    "title": "Ice Pick",
+    "aliases": [
+      "ice pick"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/ilate.webp",
+    "alt": "Ilate",
+    "title": "Ilate",
+    "aliases": [
+      "ilate"
+    ],
+    "details": "Available: 200, 400, 600"
+  },
+  {
+    "image": "/images/inch_tape.webp",
+    "alt": "Inch Tape",
+    "title": "Inch Tape",
+    "aliases": [
+      "inch tape",
+      "inchi tape"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: 3 mtr, 5 mtr, 30 mtr"
+  },
+  {
+    "image": "/images/jaali.webp",
+    "alt": "PVC Jaali",
+    "title": "PVC Jaali",
+    "aliases": [
+      "pvc jaali"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/jack.webp",
+    "alt": "Jack",
+    "title": "Jack",
+    "aliases": [
+      "jack"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/kadi.webp",
+    "image_1": "/images/kadi_1.webp",
+    "alt": "Kadi",
+    "title": "Kadi",
+    "aliases": [
+      "kadi"
+    ],
+    "subType": "Black, Chrome & Steel",
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/katta_silai_dhaga.webp",
+    "alt": "Katta Silai Dhaga",
+    "title": "Katta Silai Dhaga",
+    "aliases": [
+      "katta silai dhaga"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/knife_and_trimming_blade.webp",
+    "alt": "Knife And Trimming Blade",
+    "title": "Knife And Trimming Blade",
+    "aliases": [
+      "knife and trimming blade"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/lal_ghoda_mobioil.webp",
+    "alt": "Lal Ghoda Mobioil",
+    "title": "Lal Ghoda Mobioil",
+    "aliases": [
+      "lal ghoda mobioil"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/latex.webp",
+    "alt": "Latex",
+    "title": "Latex",
+    "aliases": [
+      "latex"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/leather_belt.webp",
+    "alt": "Leather Belt",
+    "title": "Leather Belt",
+    "aliases": [
+      "leather belt"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/lycra.webp",
+    "alt": "Lycra",
+    "title": "Lycra",
+    "aliases": [
+      "lycra"
+    ],
+    "subType": "2-way,4-way & VKC",
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/machine_belt.webp",
+    "image_1": "/images/machine_belt_1.webp",
+    "alt": "Machine Belt",
+    "title": "Machine Belt",
+    "aliases": [
+      "machine belt"
+    ],
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/magic_marker.webp",
+    "alt": "Magic Marker",
+    "title": "Magic Marker",
+    "aliases": [
+      "magic marker"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/marker.webp",
+    "alt": "Marker",
+    "title": "Marker",
+    "aliases": [
+      "marker"
+    ],
+    "details": "Available: Black & Green"
+  },
+  {
+    "image": "/images/marker_ink.webp",
+    "alt": "Marker Ink",
+    "title": "Marker Ink",
+    "aliases": [
+      "marker ink"
+    ],
+    "details": "Available: Black & Green"
+  },
+  {
+    "image": "/images/masking_tape.webp",
+    "alt": "Masking Tape",
+    "title": "Masking Tape",
+    "aliases": [
+      "masking tape"
+    ],
+    "details": "Available: 1 inch & 2 inch"
+  },
+  {
+    "image": "/images/needle.webp",
+    "image_1": "/images/needle_1.webp",
+    "image_2": "/images/needle_original.webp",
+    "alt": "Needle",
+    "title": "Needle",
+    "aliases": [
+      "needle"
+    ],
+    "subType": "Groz, Flying Tiger",
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/nose_plas (2).webp",
+    "image_1": "/images/nose_plas.webp",
+    "alt": "Nose Plas",
+    "title": "Nose Plas",
+    "aliases": [
+      "nose plas",
+      "plier"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/nylon_black_tape.webp",
+    "alt": "Nylon Black Tape",
+    "title": "Nylon Black Tape",
+    "aliases": [
+      "nylon black tape"
+    ],
+    "details": "Available: 10 mm, 12 mm, 15 mm, 20 mm, 24 mm in Black & White"
+  },
+  {
+    "image": "/images/oil.webp",
+    "alt": "Oil",
+    "title": "Oil",
+    "aliases": [
+      "oil"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/oil_keep.webp",
+    "alt": "Oil Keep",
+    "title": "Oil Keep",
+    "aliases": [
+      "oil keep",
+      "keepe"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/olfa_knife.webp",
+    "alt": "Olfa Knife",
+    "title": "Olfa Knife",
+    "aliases": [
+      "olfa knife"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pari_color.webp",
+    "alt": "Pari Color",
+    "title": "Pari Color",
+    "aliases": [
+      "pari color"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pattern_sheet.webp",
+    "alt": "Pattern Sheet",
+    "title": "Pattern Sheet",
+    "aliases": [
+      "pattern sheet"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/penchis.webp",
+    "image_1": "/images/penchis_1.webp",
+    "alt": "Penchis",
+    "title": "Penchis",
+    "aliases": [
+      "penchis"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pipe.webp",
+    "alt": "Pipe",
+    "title": "Pipe",
+    "aliases": [
+      "pipe"
+    ],
+    "details": "Available: 6mm to 14 mm"
+  },
+  {
+    "image": "/images/plaas.webp",
+    "alt": "Plaas",
+    "title": "Plaas",
+    "aliases": [
+      "plaas"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/polish.webp",
+    "alt": "Polish",
+    "title": "Polish",
+    "aliases": [
+      "polish"
+    ],
+    "details": "Available: Brown & Black"
+  },
+  {
+    "image": "/images/polish_brush.webp",
+    "alt": "Polish Brush",
+    "title": "Polish Brush",
+    "aliases": [
+      "polish brush"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pvc_board.webp",
+    "alt": "Pvc Board",
+    "title": "Pvc Board",
+    "aliases": [
+      "pvc board"
+    ],
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/pvc_cut_washer.webp",
+    "alt": "Pvc Cut Washer",
+    "title": "Pvc Cut Washer",
+    "aliases": [
+      "pvc cut washer"
+    ],
+    "details": "Available: Black & White"
+  },
+  {
+    "image": "/images/pvc_danda.webp",
+    "alt": "Pvc Danda",
+    "title": "Pvc Danda",
+    "aliases": [
+      "pvc danda"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pvc_gloves.webp",
+    "alt": "Pvc Gloves",
+    "title": "Pvc Gloves",
+    "aliases": [
+      "pvc gloves"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pvc_hammer_gutka.webp",
+    "alt": "Pvc Hammer Gutka",
+    "title": "Pvc Hammer Gutka",
+    "aliases": [
+      "pvc hammer gutka"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pvc_hammer_gutka_heavy.webp",
+    "alt": "Pvc Hammer Gutka Heavy",
+    "title": "Pvc Hammer Gutka Heavy",
+    "aliases": [
+      "pvc hammer gutka heavy"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/pvc_keel.webp",
+    "alt": "Pvc Keel",
+    "title": "Pvc Keel",
+    "aliases": [
+      "pvc keel"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/rivit.webp",
+    "image_1": "/images/rivit_1.webp",
+    "alt": "Rivit",
+    "title": "Rivit",
+    "aliases": [
+      "rivit"
+    ],
+    "details": "Available: In all sizes"
+  },
+  {
+    "image": "/images/rubber_band.webp",
+    "alt": "Rubber Band",
+    "title": "Rubber Band",
+    "aliases": [
+      "rubber band"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/scale.webp",
+    "alt": "Scale",
+    "title": "Scale",
+    "aliases": [
+      "scale"
+    ],
+    "details": "Available: 6 inch, 12 inch, 24 inch, 36 inch"
+  },
+  {
+    "image": "/images/scissor.webp",
+    "alt": "Scissor",
+    "title": "Scissor",
+    "aliases": [
+      "scissor"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/seeti.webp",
+    "alt": "Seeti",
+    "title": "Seeti",
+    "aliases": [
+      "seeti"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/shiner.webp",
+    "alt": "Shoe Shiner",
+    "title": "Shoe Shiner",
+    "aliases": [
+      "shoe shiner"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/shoe_harn.webp",
+    "alt": "Shoe Harn",
+    "title": "Shoe Harn",
+    "aliases": [
+      "shoe harn"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/silicon_spray.webp",
+    "alt": "Silicon Spray",
+    "title": "Silicon Spray",
+    "aliases": [
+      "silicon spray"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/silver_refill.webp",
+    "alt": "Silver Refill",
+    "title": "Silver Refill",
+    "aliases": [
+      "silver refill"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/sootli.webp",
+    "alt": "Sootli",
+    "title": "Sootli",
+    "aliases": [
+      "sootli"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/stapler.webp",
+    "alt": "Stapler",
+    "title": "Stapler",
+    "aliases": [
+      "stapler"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/stefnar.webp",
+    "image_1": "/images/stefnar (2).webp",
+    "alt": "Stefnar",
+    "title": "Stefnar",
+    "aliases": [
+      "stefnar"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/sticker.webp",
+    "alt": "Sticker",
+    "title": "Sticker",
+    "aliases": [
+      "sticker"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/suaa.webp",
+    "alt": "Suaa",
+    "title": "Suaa",
+    "aliases": [
+      "suaa"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/syringe.webp",
+    "alt": "Syringe",
+    "title": "Syringe",
+    "aliases": [
+      "syringe"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/syringe_needle.webp",
+    "alt": "Syringe Needle",
+    "title": "Syringe Needle",
+    "aliases": [
+      "syringe needle"
+    ],
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/tagore_ink.webp",
+    "alt": "Tagore Ink",
+    "title": "Tagore Ink",
+    "aliases": [
+      "tagore ink"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/tagore_marker.webp",
+    "alt": "Tagore Marker",
+    "title": "Tagore Marker",
+    "aliases": [
+      "tagore marker"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/tag_gun.webp",
+    "alt": "Tag Gun",
+    "title": "Tag Gun",
+    "aliases": [
+      "tag gun"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/thread_cutter.webp",
+    "alt": "Thread Cutter",
+    "title": "Thread Cutter",
+    "aliases": [
+      "thread cutter"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/tingle.webp",
+    "alt": "Tingle",
+    "title": "Tingle",
+    "aliases": [
+      "tingle"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/velcro.webp",
+    "alt": "Velcro",
+    "title": "Velcro",
+    "aliases": [
+      "velcro"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/ycon.webp",
+    "alt": "Ycon",
+    "title": "Ycon",
+    "aliases": [
+      "ycon"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  },
+  {
+    "image": "/images/zero_pechkas.webp",
+    "alt": "Zero Pechkas",
+    "title": "Zero Pechkas",
+    "aliases": [
+      "zero pechkas"
+    ],
+    "subType": "PU & Rubber-based",
+    "details": "Available: In all quantities"
+  }
+]

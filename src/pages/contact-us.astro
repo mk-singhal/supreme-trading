@@ -76,7 +76,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                 <strong>Address:</strong><br />
               </span>
-              <a href="/contact-us" class="hover:underline">
+              <a href="https://maps.app.goo.gl/yecRu2Mu3tWNaq2L9" target="_blank" rel="noopener noreferrer" class="hover:underline">
                 504, MIE Part-A, Bahadurgarh, Haryana, India
               </a>
             </p>
@@ -102,7 +102,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                 <strong>Phone:</strong>
               </span>
-              <a href="tel:+919315609098" class="hover:underline">
+              <a href="tel:+919315609098" target="_blank" rel="noopener noreferrer" class="hover:underline">
                 +91-9315609098
               </a>
             </p>
@@ -128,7 +128,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                 <strong>Phone:</strong>
               </span>
-              <a href="tel:+918168478237" class="hover:underline">
+              <a href="tel:+918168478237" target="_blank" rel="noopener noreferrer" class="hover:underline">
                 +91-8168478237
               </a>
             </p>
@@ -149,7 +149,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </svg>
                 <strong>WhatsApp:</strong>
               </span>
-              <a href="https://wa.me/919315609098" class="hover:underline">
+              <a href="https://wa.me/919315609098" target="_blank" rel="noopener noreferrer" class="hover:underline">
                 +91-9315609098
               </a>
             </p>
@@ -186,6 +186,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               </span>
               <a
                 href="mailto:supremetrading2@gmail.com"
+                target="_blank" rel="noopener noreferrer"
                 class="hover:underline break-all"
               >
                 supremetrading2@gmail.com
@@ -243,6 +244,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <!-- Right Column: Form -->
         <div class="p-4 lg:w-1/2 w-full">
           <form
+            id="contact-form"
             class="bg-gray-100 rounded-lg p-6 flex flex-col md:ml-auto w-full"
           >
             <h2 class="text-lg font-semibold text-gray-900 mb-4">
@@ -273,6 +275,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               />
             </div>
             <div class="relative mb-4">
+              <label for="address" class="leading-7 text-sm text-gray-600"
+                >Address</label
+              >
+              <input
+                type="tel"
+                id="address"
+                name="address"
+                required
+                class="w-full bg-white rounded border border-gray-300 focus:border-yellow-600 focus:ring-2 focus:ring-yellow-100 text-base outline-none py-2 px-3 transition duration-200 ease-in-out"
+              />
+            </div>
+            <div class="relative mb-4">
               <label for="message" class="leading-7 text-sm text-gray-600"
                 >Message</label
               >
@@ -295,14 +309,61 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <!-- Google Map Embed -->
       <div class="mt-16">
-        <iframe
+        <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!..."
           width="100%"
           height="300"
           class="rounded-lg border-2 border-gray-200"
           allowfullscreen=""
+          loading="lazy"></iframe> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.74773569850228!2d76.95155192023967!3d28.69073032401683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d09571eaf7b81%3A0xbd518255ab07d89d!2sSupreme%20Trading!5e0!3m2!1sen!2sin!4v1753375769495!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          class="rounded-lg border-2 border-gray-200"
+          style="border:0;"
+          allowfullscreen=""
           loading="lazy"></iframe>
       </div>
     </div>
   </section>
+  <div id="success-toast" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-md hidden z-50">
+    Message sent successfully!
+  </div>
+
 </BaseLayout>
+<script>
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbwbIuNRln5cNMEiQEFOJcu7-nySGMwYNtuJs4xt-f-pHQZMBmq3h1WRsr475wxVZDmG/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (res.ok) {
+        showSuccessToast();
+        form.reset();
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error submitting form.");
+    }
+  });
+  function showSuccessToast() {
+    const toast = document.getElementById("success-toast");
+    toast!.classList.remove("hidden");
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 3000); // Hide after 3 seconds
+  }
+</script>

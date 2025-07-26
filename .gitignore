@@ -30,3 +30,7 @@ astro.config.mjs.ts
 
 # pages
 src/pages/landing.astro
+
+# Utilities
+prepare_json.js
+./products.json

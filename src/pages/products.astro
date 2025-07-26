@@ -1,116 +1,158 @@
 ---
-// For Astro, if using
-title: "Products - Supreme Trading Company";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import allProducts from "../data/products.json";
+
+// Query params
+const search = Astro.url.searchParams.get("search")?.toLowerCase() || "";
+const page = Number(Astro.url.searchParams.get("page") || "1");
+
+// Filtered and paginated products
+const filtered = allProducts.filter(
+  (p) =>
+    p.title.toLowerCase().includes(search) ||
+    p.subType?.toLowerCase().includes(search) ||
+    p.details?.toLowerCase().includes(search) ||
+    p.aliases.some((alias) => alias.toLowerCase().includes(search))
+);
+
+const perPage = 12;
+const totalPages = Math.ceil(filtered.length / perPage);
+const paginated = filtered.slice((page - 1) * perPage, page * perPage);
+
+// Helper for smart pagination
+function getPagination(current, total) {
+  const delta = 1;
+  const range: number[] = [];
+  const rangeWithDots: (number | string)[] = [];
+  let l;
+
+  for (let i = 1; i <= total; i++) {
+    if (
+      i === 1 ||
+      i === total ||
+      (i >= current - delta && i <= current + delta)
+    ) {
+      range.push(i);
+    }
+  }
+
+  for (let i of range) {
+    if (l) {
+      if (i - l === 2) {
+        rangeWithDots.push(l + 1);
+      } else if (i - l !== 1) {
+        rangeWithDots.push("...");
+      }
+    }
+    rangeWithDots.push(i);
+    l = i;
+  }
+
+  return rangeWithDots;
+}
+const paginationLinks = getPagination(page, totalPages);
 ---
 
 <BaseLayout>
-  <section class="text-gray-700 body-font bg-white py-12 py-12">
+  <section class="text-gray-700 body-font bg-white py-12">
     <div class="container px-5 mx-auto">
       <!-- Heading -->
       <h2 class="sm:text-4xl text-3xl font-bold text-gray-900 mb-8 text-center">
         Products
       </h2>
 
-      <!-- Search Bar -->
-      <div class="flex justify-center mb-10">
+      <!-- Search Form -->
+      <form
+        method="GET"
+        class="relative flex justify-center mb-10 w-full max-w-md mx-auto"
+      >
         <input
           type="text"
+          name="search"
           placeholder="Search products..."
-          class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600"
+          value={search}
+          class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600"
         />
-      </div>
+        {
+          search && (
+            <a
+              href="/products"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-red-500"
+              title="Clear search"
+            >
+              &times;
+            </a>
+          )
+        }
+        <button type="submit" class="hidden">Search</button>
+      </form>
 
       <!-- Product Grid -->
-      <div class="flex flex-wrap -m-4">
-        <!-- Product Tile 1 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Adhesive"
-              class="object-cover object-center w-full h-full block"
-              src="/images/adhesive.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-              CATEGORY: Adhesive
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Premium Glue
-            </h2>
-            <p class="text-sm text-gray-600 mt-1">
-              Sub-type: PU & Rubber-based
-            </p>
-            <p class="text-sm text-gray-600">Available: 1L, 5L, 20L</p>
-          </div>
-        </div>
+      <div class="flex flex-wrap -m-4 justify-center">
+        {
+          paginated.length === 0 ? (
+            <p class="text-center w-full text-gray-600">No products found.</p>
+          ) : (
+            paginated.map((product) => (
+              <div class="xl:w-1/4 lg:w-1/3 sm:w-1/2 p-4 w-full text-center">
+                <a
+                  class="block relative h-48 max-w-96 rounded overflow-hidden mx-auto select-none"
+                  onContextMenu={(e) => e.preventDefault()}
+                >
+                  <div
+                    class="w-full h-full bg-cover bg-center"
+                    style={`background-image: url('${product.image}');`}
+                    role="img"
+                    aria-label={product.alt}
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
+                </a>
 
-        <!-- Product Tile 2 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Thread"
-              class="object-cover object-center w-full h-full block"
-              src="/images/thread.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-              CATEGORY: Thread
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Heavy-Duty Thread
-            </h2>
-            <p class="text-sm text-gray-600 mt-1">
-              Sub-type: Nylon, Cotton, Bonded
-            </p>
-            <p class="text-sm text-gray-600">Quantity: 100m, 500m spools</p>
-          </div>
-        </div>
-
-        <!-- Product Tile 3 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Foam"
-              class="object-cover object-center w-full h-full block"
-              src="/images/foam.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-              CATEGORY: Foam
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Sole Cushion Foam
-            </h2>
-            <p class="text-sm text-gray-600 mt-1">Sub-type: EVA, PU, Latex</p>
-            <p class="text-sm text-gray-600">Sheets: 2mm to 10mm</p>
-          </div>
-        </div>
-
-        <!-- Product Tile 4 -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <a class="block relative h-48 rounded overflow-hidden">
-            <img
-              alt="Buckles"
-              class="object-cover object-center w-full h-full block"
-              src="/images/buckles.jpg"
-            />
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-              CATEGORY: Accessories
-            </h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">
-              Metal & Plastic Buckles
-            </h2>
-            <p class="text-sm text-gray-600 mt-1">Sub-type: Round, Pin, Snap</p>
-            <p class="text-sm text-gray-600">Sizes: 1/2" to 2"</p>
-          </div>
-        </div>
+                <div class="mt-4">
+                  {/* <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+                  CATEGORY: {product.category}
+                </h3> */}
+                  <h2 class="text-gray-900 title-font text-lg font-medium">
+                    {product.title}
+                  </h2>
+                  {product.subType && (
+                    <p class="text-sm text-gray-600 mt-1">
+                      Types: {product.subType}
+                    </p>
+                  )}
+                  <p class="text-sm text-gray-600">{product.details}</p>
+                </div>
+              </div>
+            ))
+          )
+        }
       </div>
+
+      <!-- Smart Pagination -->
+      {
+        totalPages > 1 && (
+          <div class="flex justify-center mt-10 flex-wrap gap-1 sm:gap-2">
+            {paginationLinks.map((i) =>
+              typeof i === "number" ? (
+                <a
+                  href={`?search=${encodeURIComponent(search)}&page=${i}`}
+                  class={`px-3 sm:px-4 py-1.5 sm:py-2 rounded border text-xs sm:text-sm ${
+                    i === page
+                      ? "bg-yellow-600 text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  }`}
+                >
+                  {i}
+                </a>
+              ) : (
+                <span class="px-2 sm:px-3 py-1.5 sm:py-2 text-gray-500 text-xs sm:text-sm select-none">
+                  …
+                </span>
+              )
+            )}
+          </div>
+        )
+      }
     </div>
   </section>
 </BaseLayout>
